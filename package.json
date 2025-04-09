@@ -1,0 +1,27 @@
+{
+   "name": "vuetify-landing-page",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.3.4",
+    "vuetify": "^3.3.15",
+    "@mdi/font": "^7.2.96",
+    "vue-router": "^4.2.4",
+    "pinia": "^2.1.6",
+    "pinia-plugin-persistedstate": "^3.2.0",
+    "jwt-decode": "^3.1.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.0",
+    "vue-tsc": "^1.8.3"
+  }
+}
+ 
