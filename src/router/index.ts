@@ -1,4 +1,4 @@
-import   { createRouter, createWebHistory } from 'vue-router'
+import  { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Inventory from '../views/Inventory.vue'
 import SignIn from '../views/SignIn.vue'
@@ -45,7 +45,7 @@ const router = createRouter({
   }
 })
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _from, next) => {
   const authStore = useAuthStore()
   
   if (to.meta.requiresAuth && !authStore.isAuthenticated) {

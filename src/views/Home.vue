@@ -1,8 +1,8 @@
 <template>
-   <div>
+     <div>
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
-      <v-parallax src="https://images.unsplash.com/photo-1724709162875-fe100dd0e04b?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwxfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDIzMTk2N3ww&ixlib=rb-4.0.3&fit=fillmax&h=800&w=1200" 
+      <v-parallax src="https://images.unsplash.com/photo-1724709162875-fe100dd0e04b?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwxfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&h=800&w=1200" 
         :height="600">
         <div class="hero-overlay"></div>
         <v-container class="hero-content d-flex flex-column justify-center" style="height: 100%">
@@ -90,7 +90,7 @@
         <v-row align="center">
           <v-col cols="12" md="6">
             <v-img
-              src="https://images.unsplash.com/photo-1601598838108-5019bf3ea4a6?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwzfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDIzMTk2N3ww&ixlib=rb-4.0.3&fit=fillmax&h=800&w=1200"
+              src="https://images.unsplash.com/photo-1601598838108-5019bf3ea4a6?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwzfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&h=800&w=1200"
               cover
               class="rounded-lg elevation-4"
               height="400"

@@ -1,5 +1,5 @@
 <template>
-    <div>
+      <div>
     <v-container>
       <v-row class="mb-6 mt-4">
         <v-col cols="12">
@@ -558,9 +558,6 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
-import { useThemeStore } from '../stores/theme'
-
-const themeStore = useThemeStore()
 
 interface InventoryItem {
   id: number
@@ -640,7 +637,7 @@ const items = ref<InventoryItem[]>([
     id: 1,
     name: 'Premium Coffee Beans',
     sku: 'CB-001',
-    image: 'https://images.unsplash.com/photo-1601598704991-eef6114775e0?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwyfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDIzMTk2N3ww&ixlib=rb-4.0.3&fit=fillmax&h=200&w=200',
+    image: 'https://images.unsplash.com/photo-1601598704991-eef6114775e0?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwyfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&h=200&w=200',
     price: 18.99,
     priceDelta: 1.50,
     stock: 142,
@@ -656,7 +653,7 @@ const items = ref<InventoryItem[]>([
     id: 2,
     name: 'Organic Tea Collection',
     sku: 'TC-445',
-    image: 'https://images.unsplash.com/photo-1600618528240-fb9fc964b853?auto=format&fit=crop&w=200&h=200&q=80',
+    image: 'https://images.unsplash.com/photo-1601598838108-5019bf3ea4a6?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwzfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80',
     price: 24.99,
     priceDelta: -2.00,
     stock: 78,
@@ -672,7 +669,7 @@ const items = ref<InventoryItem[]>([
     id: 3,
     name: 'Smart Thermostat',
     sku: 'ST-109',
-    image: 'https://images.unsplash.com/photo-1600648056169-f9a36a0a8bdd?auto=format&fit=crop&w=200&h=200&q=80',
+    image: 'https://images.unsplash.com/photo-1601598838108-5019bf3ea4a6?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwzfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80',
     price: 129.99,
     priceDelta: 0,
     stock: 23,
@@ -687,7 +684,7 @@ const items = ref<InventoryItem[]>([
     id: 4,
     name: 'Wireless Headphones',
     sku: 'WH-785',
-    image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=200&h=200&q=80',
+    image: 'https://images.unsplash.com/photo-1601598704991-eef6114775e0?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwyfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80',
     price: 89.99,
     priceDelta: -5.00,
     stock: 56,
@@ -703,7 +700,7 @@ const items = ref<InventoryItem[]>([
     id: 5,
     name: 'Fitness Tracker',
     sku: 'FT-332',
-    image: 'https://images.unsplash.com/photo-1576243345690-4e4b79b63288?auto=format&fit=crop&w=200&h=200&q=80',
+    image: 'https://images.unsplash.com/photo-1601598838108-5019bf3ea4a6?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwzfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80',
     price: 59.95,
     priceDelta: 4.95,
     stock: 12,
@@ -719,7 +716,7 @@ const items = ref<InventoryItem[]>([
     id: 6,
     name: 'Portable Charger',
     sku: 'PC-897',
-    image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=200&h=200&q=80',
+    image: 'https://images.unsplash.com/photo-1601598704991-eef6114775e0?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwyfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80',
     price: 39.99,
     priceDelta: 0,
     stock: 89,
@@ -733,7 +730,7 @@ const items = ref<InventoryItem[]>([
     id: 7,
     name: 'Ceramic Mug Set',
     sku: 'CM-234',
-    image: 'https://images.unsplash.com/photo-1545669577-c2b89ee55388?auto=format&fit=crop&w=200&h=200&q=80',
+    image: 'https://images.unsplash.com/photo-1601598704991-eef6114775e0?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwyfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80',
     price: 34.50,
     priceDelta: -1.50,
     stock: 0,
@@ -749,7 +746,7 @@ const items = ref<InventoryItem[]>([
     id: 8,
     name: 'Ultra HD Monitor',
     sku: 'UM-789',
-    image: 'https://images.unsplash.com/photo-1544652478-6653e09f18a2?auto=format&fit=crop&w=200&h=200&q=80',
+    image: 'https://images.unsplash.com/photo-1601598838108-5019bf3ea4a6?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwzfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80',
     price: 299.99,
     priceDelta: 20.00,
     stock: 7,
@@ -764,7 +761,7 @@ const items = ref<InventoryItem[]>([
     id: 9,
     name: 'Digital Drawing Tablet',
     sku: 'DT-456',
-    image: 'https://images.unsplash.com/photo-1551602116-c0d70a21bad6?auto=format&fit=crop&w=200&h=200&q=80',
+    image: 'https://images.unsplash.com/photo-1601598704991-eef6114775e0?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwyfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80',
     price: 149.99,
     priceDelta: 0,
     stock: 3,
@@ -780,7 +777,7 @@ const items = ref<InventoryItem[]>([
     id: 10,
     name: 'Smart Doorbell',
     sku: 'SD-678',
-    image: 'https://images.unsplash.com/photo-1585301669225-1c69d71a833d?auto=format&fit=crop&w=200&h=200&q=80',
+    image: 'https://images.unsplash.com/photo-1601598838108-5019bf3ea4a6?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwzfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80',
     price: 199.99,
     priceDelta: -15.00,
     stock: 0,

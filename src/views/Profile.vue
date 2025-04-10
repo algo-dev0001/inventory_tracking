@@ -1,5 +1,5 @@
 <template>
-   <v-container class="py-8">
+    <v-container class="py-8">
     <v-row>
       <v-col cols="12">
         <h1 class="text-h3 font-weight-bold mb-2">User Profile</h1>
@@ -465,7 +465,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, computed } from 'vue'
+import { ref, reactive } from 'vue'
 import { useAuthStore } from '../stores/auth'
 
 const authStore = useAuthStore()

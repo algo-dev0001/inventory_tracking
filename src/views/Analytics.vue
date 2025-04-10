@@ -1,5 +1,5 @@
 <template>
-   <v-container fluid>
+      <v-container fluid>
     <v-row class="mb-6 mt-4">
       <v-col cols="12">
         <h1 class="text-h3 font-weight-bold">Analytics Dashboard</h1>
@@ -130,7 +130,7 @@
           <v-card-text class="d-flex justify-center align-center" style="height: 350px">
             <v-responsive width="100%" class="price-chart">
               <v-img 
-                src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMGFuYWx5dGljcyUyMGRhc2hib2FyZCUyMGNoYXJ0cyUyMGdyYXBoc3xlbnwwfHx8fDE3NDQyMzU2NjN8MA&ixlib=rb-4.0.3&fit=fillmax&h=350"
+                src="https://images.unsplash.com/photo-1601598853072-3969239a6b9e?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHw0fHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&h=350"
                 class="rounded"
                 cover
               >
@@ -148,7 +148,7 @@
           <v-card-text class="d-flex justify-center align-center" style="height: 350px">
             <v-responsive width="100%" class="pie-chart">
               <v-img 
-                src="https://images.unsplash.com/photo-1556155092-490a1ba16284?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHw0fHxidXNpbmVzcyUyMGFuYWx5dGljcyUyMGRhc2hib2FyZCUyMGNoYXJ0cyUyMGdyYXBoc3xlbnwwfHx8fDE3NDQyMzU2NjN8MA&ixlib=rb-4.0.3&fit=fillmax&h=350" 
+                src="https://images.unsplash.com/photo-1601598838108-5019bf3ea4a6?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwzfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&h=350" 
                 class="rounded"
                 cover
               >
@@ -168,7 +168,7 @@
           <v-card-text class="d-flex justify-center align-center" style="height: 300px">
             <v-responsive width="100%" class="bar-chart">
               <v-img 
-                src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMGFuYWx5dGljcyUyMGRhc2hib2FyZCUyMGNoYXJ0cyUyMGdyYXBoc3xlbnwwfHx8fDE3NDQyMzU2NjN8MA&ixlib=rb-4.0.3&fit=fillmax&h=300"
+                src="https://images.unsplash.com/photo-1601598704991-eef6114775e0?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwyfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&h=300"
                 class="rounded"
                 cover
               >
@@ -186,7 +186,7 @@
           <v-card-text class="d-flex justify-center align-center" style="height: 300px">
             <v-responsive width="100%" class="radar-chart">
               <v-img 
-                src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGFuYWx5dGljcyUyMGRhc2hib2FyZCUyMGNoYXJ0cyUyMGdyYXBocyUyMGJ5JTIwc291cmNlfGVufDB8fHx8MTc0NDIzNjg3OXww&ixlib=rb-4.0.3&fit=fillmax&h=600&w=800"
+                src="https://images.unsplash.com/photo-1738089447954-612905a42b01?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHw1fHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&h=300"
                 class="rounded"
                 cover
               >
@@ -224,23 +224,23 @@
             >
               <template v-slot:item.image="{ item }">
                 <v-avatar size="36">
-                  <v-img :src="item.image" cover></v-img>
+                  <v-img :src="(item as any).image" cover></v-img>
                 </v-avatar>
               </template>
               
               <template v-slot:item.price="{ item }">
-                ${{ item.price.toFixed(2) }}
+                ${{ (item as any).price.toFixed(2) }}
               </template>
               
               <template v-slot:item.priceChange="{ item }">
-                <span :class="getPriceColorClass(item.priceChange)">
-                  {{ item.priceChange > 0 ? '+' : '' }}{{ item.priceChange.toFixed(2) }}%
+                <span :class="getPriceColorClass((item as any).priceChange)">
+                  {{ (item as any).priceChange > 0 ? '+' : '' }}{{ (item as any).priceChange.toFixed(2) }}%
                 </span>
               </template>
               
               <template v-slot:item.performanceScore="{ item }">
                 <v-progress-linear
-                  :model-value="item.performanceScore"
+                  :model-value="(item as any).performanceScore"
                   height="8"
                   color="primary"
                   rounded
@@ -249,11 +249,11 @@
               
               <template v-slot:item.trend="{ item }">
                 <v-icon
-                  :color="item.trend === 'up' ? 'success' : item.trend === 'down' ? 'error' : ''"
+                  :color="(item as any).trend === 'up' ? 'success' : (item as any).trend === 'down' ? 'error' : ''"
                 >
                   {{ 
-                    item.trend === 'up' ? 'mdi-trending-up' : 
-                    item.trend === 'down' ? 'mdi-trending-down' : 
+                    (item as any).trend === 'up' ? 'mdi-trending-up' : 
+                    (item as any).trend === 'down' ? 'mdi-trending-down' : 
                     'mdi-trending-neutral'
                   }}
                 </v-icon>
@@ -462,8 +462,16 @@ const dataSources = ['All Sources', 'Amazon', 'Walmart', 'BestBuy', 'Target', 'H
 const performanceMetric = ref('Sales')
 const performanceMetrics = ['Sales', 'Price Change', 'Stock Turnover', 'View-to-Purchase']
 
+interface SummaryStat {
+  label: string;
+  value: string;
+  icon: string;
+  color: string;
+  change: number;
+}
+
 // Summary statistics by source
-const summaryStatsBySource = {
+const summaryStatsBySource: Record<string, SummaryStat[]> = {
   'All Sources': [
     {
       label: 'Total Products',
@@ -676,8 +684,18 @@ const summaryStatsBySource = {
   ]
 }
 
+interface SourcePerformance {
+  source: string;
+  products: number;
+  inStock: number;
+  outOfStock: number;
+  avgPrice: number;
+  priceChange: number;
+  salesTrend: number[];
+}
+
 // Source performance data
-const sourcePerformance = [
+const sourcePerformance: SourcePerformance[] = [
   {
     source: 'Amazon',
     products: 159,
@@ -752,11 +770,21 @@ const performanceHeaders = [
   { title: 'Trend', key: 'trend' }
 ]
 
+interface ProductItem {
+  image: string;
+  name: string;
+  price: number;
+  priceChange: number;
+  source: string;
+  performanceScore: number;
+  trend: string;
+}
+
 // Products by source
-const topProductsBySource = {
+const topProductsBySource: Record<string, ProductItem[]> = {
   'All Sources': [
     {
-      image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=48&h=48&q=80',
+      image: 'https://images.unsplash.com/photo-1601598704991-eef6114775e0?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwyfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&w=48&h=48',
       name: 'Wireless Headphones',
       price: 89.99,
       priceChange: -5.2,
@@ -765,7 +793,7 @@ const topProductsBySource = {
       trend: 'up'
     },
     {
-      image: 'https://images.unsplash.com/photo-1576243345690-4e4b79b63288?auto=format&fit=crop&w=48&h=48&q=80',
+      image: 'https://images.unsplash.com/photo-1601598838108-5019bf3ea4a6?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwzfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&w=48&h=48',
       name: 'Fitness Tracker',
       price: 59.95,
       priceChange: 8.5,
@@ -774,7 +802,7 @@ const topProductsBySource = {
       trend: 'up'
     },
     {
-      image: 'https://images.unsplash.com/photo-1600648056169-f9a36a0a8bdd?auto=format&fit=crop&w=48&h=48&q=80',
+      image: 'https://images.unsplash.com/photo-1601598838108-5019bf3ea4a6?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwzfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&w=48&h=48',
       name: 'Smart Thermostat',
       price: 129.99,
       priceChange: 0,
@@ -783,7 +811,7 @@ const topProductsBySource = {
       trend: 'neutral'
     },
     {
-      image: 'https://images.unsplash.com/photo-1601598704991-eef6114775e0?auto=format&fit=crop&w=48&h=48&q=80',
+      image: 'https://images.unsplash.com/photo-1601598704991-eef6114775e0?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwyfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&w=48&h=48',
       name: 'Premium Coffee Beans',
       price: 18.99,
       priceChange: 7.9,
@@ -792,7 +820,7 @@ const topProductsBySource = {
       trend: 'down'
     },
     {
-      image: 'https://images.unsplash.com/photo-1544652478-6653e09f18a2?auto=format&fit=crop&w=48&h=48&q=80',
+      image: 'https://images.unsplash.com/photo-1601598838108-5019bf3ea4a6?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwzfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&w=48&h=48',
       name: 'Ultra HD Monitor',
       price: 299.99,
       priceChange: 6.7,
@@ -803,7 +831,7 @@ const topProductsBySource = {
   ],
   'Amazon': [
     {
-      image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=48&h=48&q=80',
+      image: 'https://images.unsplash.com/photo-1601598704991-eef6114775e0?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwyfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&w=48&h=48',
       name: 'Wireless Headphones',
       price: 89.99,
       priceChange: -5.2,
@@ -812,7 +840,7 @@ const topProductsBySource = {
       trend: 'up'
     },
     {
-      image: 'https://images.unsplash.com/photo-1601598704991-eef6114775e0?auto=format&fit=crop&w=48&h=48&q=80',
+      image: 'https://images.unsplash.com/photo-1601598704991-eef6114775e0?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwyfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&w=48&h=48',
       name: 'Premium Coffee Beans',
       price: 18.99,
       priceChange: 7.9,
@@ -821,7 +849,7 @@ const topProductsBySource = {
       trend: 'down'
     },
     {
-      image: 'https://images.unsplash.com/photo-1551602116-c0d70a21bad6?auto=format&fit=crop&w=48&h=48&q=80',
+      image: 'https://images.unsplash.com/photo-1601598704991-eef6114775e0?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwyfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&w=48&h=48',
       name: 'Digital Drawing Tablet',
       price: 149.99,
       priceChange: 0,
@@ -832,7 +860,7 @@ const topProductsBySource = {
   ],
   'Walmart': [
     {
-      image: 'https://images.unsplash.com/photo-1600618528240-fb9fc964b853?auto=format&fit=crop&w=48&h=48&q=80',
+      image: 'https://images.unsplash.com/photo-1601598838108-5019bf3ea4a6?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwzfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&w=48&h=48',
       name: 'Organic Tea Collection',
       price: 24.99,
       priceChange: -2.0,
@@ -841,7 +869,7 @@ const topProductsBySource = {
       trend: 'up'
     },
     {
-      image: 'https://images.unsplash.com/photo-1591155426209-259b046aae4e?auto=format&fit=crop&w=48&h=48&q=80',
+      image: 'https://images.unsplash.com/photo-1601598838108-5019bf3ea4a6?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwzfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&w=48&h=48',
       name: 'Kitchen Knife Set',
       price: 79.95,
       priceChange: -1.2,
@@ -852,7 +880,7 @@ const topProductsBySource = {
   ],
   'BestBuy': [
     {
-      image: 'https://images.unsplash.com/photo-1600648056169-f9a36a0a8bdd?auto=format&fit=crop&w=48&h=48&q=80',
+      image: 'https://images.unsplash.com/photo-1601598838108-5019bf3ea4a6?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwzfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&w=48&h=48',
       name: 'Smart Thermostat',
       price: 129.99,
       priceChange: 0,
@@ -861,7 +889,7 @@ const topProductsBySource = {
       trend: 'neutral'
     },
     {
-      image: 'https://images.unsplash.com/photo-1544652478-6653e09f18a2?auto=format&fit=crop&w=48&h=48&q=80',
+      image: 'https://images.unsplash.com/photo-1601598838108-5019bf3ea4a6?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwzfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&w=48&h=48',
       name: 'Ultra HD Monitor',
       price: 299.99,
       priceChange: 6.7,
@@ -872,7 +900,7 @@ const topProductsBySource = {
   ],
   'Target': [
     {
-      image: 'https://images.unsplash.com/photo-1576243345690-4e4b79b63288?auto=format&fit=crop&w=48&h=48&q=80',
+      image: 'https://images.unsplash.com/photo-1601598838108-5019bf3ea4a6?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwzfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&w=48&h=48',
       name: 'Fitness Tracker',
       price: 59.95,
       priceChange: 8.5,
@@ -883,7 +911,7 @@ const topProductsBySource = {
   ],
   'HomeDepot': [
     {
-      image: 'https://images.unsplash.com/photo-1585301669225-1c69d71a833d?auto=format&fit=crop&w=48&h=48&q=80',
+      image: 'https://images.unsplash.com/photo-1601598838108-5019bf3ea4a6?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwzfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&w=48&h=48',
       name: 'Smart Doorbell',
       price: 199.99,
       priceChange: -15.0,
@@ -894,7 +922,7 @@ const topProductsBySource = {
   ],
   'Wayfair': [
     {
-      image: 'https://images.unsplash.com/photo-1545669577-c2b89ee55388?auto=format&fit=crop&w=48&h=48&q=80',
+      image: 'https://images.unsplash.com/photo-1601598704991-eef6114775e0?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwyfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDB8fHx8MTc0NDE5OTc5Mnww&ixlib=rb-4.0.3&fit=fillmax&w=48&h=48',
       name: 'Ceramic Mug Set',
       price: 34.50,
       priceChange: -1.5,
@@ -914,8 +942,16 @@ const filteredTopProducts = computed(() => {
   }
 })
 
+interface Recommendation {
+  title: string;
+  subtitle: string;
+  description: string;
+  icon: string;
+  color: string;
+}
+
 // Recommendations by source
-const recommendationsBySource = {
+const recommendationsBySource: Record<string, Recommendation[]> = {
   'All Sources': [
     {
       title: 'Price Opportunity',
@@ -1013,7 +1049,7 @@ const filteredRecommendations = computed(() => {
 
 // Helper function to get source icon
 const getSourceIcon = (source: string): string => {
-  const icons = {
+  const icons: Record<string, string> = {
     'Amazon': 'mdi-cart',
     'Walmart': 'mdi-store',
     'BestBuy': 'mdi-shopping',
